@@ -18,6 +18,8 @@ public abstract class Participant {
 		for (Card card : myCards) {
 			 System.out.println(card.display());
 		}
+		
+		System.out.println();
 	}
 	
 	public int getScore() {
@@ -36,7 +38,7 @@ public abstract class Participant {
 		int aceValue = 0;
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println(this.role + ": You have drawn an ace. Should it count as 1 or 11?");
+		System.out.println(this.role + ": You have an ace. Should it count as 1 or 11?");
 		
 		while (aceValue != 1 && aceValue != 11) {
 			System.out.print("Please enter '1' or '11': ");
