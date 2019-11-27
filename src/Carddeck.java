@@ -23,7 +23,7 @@ public class Carddeck {
 			cardValue.put(type[j], 10); // Value for "pictures": 10
 			j++;
 		}
-		for (char c : new char[] { 'd', 'h', 's', 'c' }) {
+		for (char c : new char[] { '\u2666', '\u2665', '\u2660', '\u2663' }) {
 			for (char t : type) {
 //			String tout = "" + t;
 //			String cout = "" + c;
