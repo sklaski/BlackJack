@@ -48,7 +48,7 @@ public class Carddeck {
 		Collections.shuffle(cardsInDeck);
 	}
 
-	private Card drawCard() {
+	public Card drawCard() {
 		if (cardsInDeck.size() > 0) {
 			Card firstCardInDeck = cardsInDeck.get(0);
 			cardsInDeck.remove(0);
