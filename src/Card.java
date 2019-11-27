@@ -26,5 +26,14 @@ public class Card {
 	public char getType() {
 		return type;
 	}
+	
+	public String display() {
+		return "" + this.getColor() + this.getType() + this.getValue();
+	}
+	
+	public static void main(String[] args) {
+		String s = "" + (9 + 9 + 9);
+		System.out.println(s);
+	}
 
 }
