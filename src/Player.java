@@ -38,7 +38,17 @@ public class Player {
 	
 	public void showCards() {
 		for (Card card : myCards) {
-			card.display();
+			 System.out.println(card.display());
 		}
 	}
+	
+	public int getScore() {
+		int score = 0;
+		
+		for (Card card : myCards) {
+			score += card.getValue();
+		}
+		
+		return score;
+	};
 }
