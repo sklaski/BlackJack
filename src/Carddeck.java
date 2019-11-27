@@ -10,14 +10,14 @@ public class Carddeck {
 
 	public Carddeck() {
 		HashMap<Character, Integer> cardValue = new HashMap<Character, Integer>();
-		char[] type = new char[14]; // Array for type (ass, 2 - 9, ten, jack, queen, king)
+		char[] type = new char[13]; // Array for type (ass, 2 - 9, ten, jack, queen, king)
 		type[0] = 'a'; // element[0]: ass
 		cardValue.put(type[0], 1); // Value for ass: 1
-		for (int i = 2; i < 10; i++) {
+		for (int i = 1; i < 9; i++) {
 			type[i] = (char) ('1' + i); // element[1..8]: 2-9
 			cardValue.put(type[i], i + 1); // Value for numbers: number
 		}
-		int j = 10;
+		int j = 9;
 		for (char c : new char[] {'0', 'j', 'q', 'k' }) {
 			type[j] = c; // element[9..11]: jack, queen, king
 			cardValue.put(type[j], 10); // Value for "pictures": 10
@@ -25,8 +25,8 @@ public class Carddeck {
 		}
 		for (char c : new char[] { '\u2666', '\u2665', '\u2660', '\u2663' }) {
 			for (char t : type) {
-//			String tout = "" + t;
-//			String cout = "" + c;
+			String tout = "" + t;
+			String cout = "" + c;
 //			System.out.print(tout + cout + cardValue.get(t) + " ");
 
 				addCard(t, c, cardValue.get(t));
@@ -40,8 +40,8 @@ public class Carddeck {
 	}
 
 	private void addCard(char cardType, char cardColor, Integer cardValue) {
-	//	Card card = new Card(cardColor, cardType, cardValue);
-		Card card = new Card(cardColor, 'a', 1);
+		Card card = new Card(cardColor, cardType, cardValue);
+//		Card card = new Card(cardColor, 'a', 1);
 
 		cardsInDeck.add(card);
 	}
