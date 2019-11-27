@@ -36,7 +36,6 @@ public abstract class Participant {
 
 	protected int decideAceValue() {
 		int aceValue = 0;
-		Scanner input = new Scanner(System.in);
 		
 		System.out.println(this.role + ": You have an ace. Should it count as 1 or 11?");
 		
@@ -44,14 +43,12 @@ public abstract class Participant {
 			System.out.print("Please enter '1' or '11': ");
 	
 			try {
-				aceValue = input.nextInt();
+				aceValue = IO.getStdinScanner().nextInt();
 			} catch (InputMismatchException e) {
-				input.next();
+				IO.getStdinScanner().next();
 			}
 		}
 		
-		//input.close();
-	
 		return aceValue;
 	};	
 }
