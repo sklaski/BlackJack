@@ -46,10 +46,11 @@ public abstract class Participant {
 			try {
 				aceValue = input.nextInt();
 			} catch (InputMismatchException e) {
+				input.next();
 			}
 		}
 		
-		input.close();
+		//input.close();
 	
 		return aceValue;
 	};	
