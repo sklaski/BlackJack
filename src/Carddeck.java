@@ -60,7 +60,7 @@ public class Carddeck {
 
 	public static void main(String[] args) {
 
-		new Carddeck();
+//		new Carddeck();
 
 	}
 }
