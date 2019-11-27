@@ -31,9 +31,8 @@ public class Play {
 		//The play
 		while (player.getScore() <= 21) {
 			// Player decides if he wants to take another card
-			Scanner myObj = new Scanner(System.in);
 			System.out.println("Do you want to take another card? (Please answer with y(es) or n(o)):");
-			String input = myObj.nextLine();
+			String input = IO.getStdinScanner().nextLine();
 
 			// Get another card
 			if (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y")) {
@@ -66,7 +65,6 @@ public class Play {
 		}
 		
 		
-
 		// Dealer's Play
 		dealer.unhideCards();
 		dealer.showCards();
