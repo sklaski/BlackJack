@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Player {
 
-	private ArrayList<Card> myCards = new ArrayList<>();
+	private ArrayList<Card> myCards;
 
 	private int decideAceValue() {
 		int aceValue = 0;
@@ -26,6 +26,10 @@ public class Player {
 		return aceValue;
 	}
 
+	public Player() {
+		 this.myCards = new ArrayList<>();
+	};
+	
 	public void takeCard(Card card) {
 		if (card.getType() == 'A') {
 			card.setValue(this.decideAceValue());
