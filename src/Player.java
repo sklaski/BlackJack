@@ -10,10 +10,10 @@ public class Player {
 		int aceValue = 0;
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Du hast ein Ass gezogen. Soll dies jetzt den Wert 1 oder 11 haben?");
+		System.out.println("You have drawn an ace. Should it count as 1 or 11?");
 		
 		while (aceValue != 1 && aceValue != 11) {
-			System.out.print("Bitte gebe '1' oder '11' ein: ");
+			System.out.print("Please enter '1' or '11': ");
 
 			try {
 				aceValue = input.nextInt();
@@ -31,6 +31,8 @@ public class Player {
 	};
 	
 	public void takeCard(Card card) {
+		this.myCards.add(card);
+
 		if (card.getType() == 'A') {
 			card.setValue(this.decideAceValue());
 		}
