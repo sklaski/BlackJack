@@ -41,7 +41,7 @@ public class Card {
 		if (hidden) {
 			return "hidden card";
 		} else {
-			return "" + this.getColor() + this.getType() + this.getValue();
+			return "" + this.getColor() + this.getType();
 		}
 	}
 
