@@ -1,10 +1,7 @@
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Player {
-
-	private ArrayList<Card> myCards;
+public class Player extends Participant {
 
 	private int decideAceValue() {
 		int aceValue = 0;
@@ -25,32 +22,15 @@ public class Player {
 
 		return aceValue;
 	}
-
-	public Player() {
-		 this.myCards = new ArrayList<>();
-	};
 	
+	@Override
 	public void takeCard(Card card) {
+		card.setHidden(false);
 		this.myCards.add(card);
 
 		if (card.getType() == 'A') {
 			card.setValue(this.decideAceValue());
 		}
 	}
-	
-	public void showCards() {
-		for (Card card : myCards) {
-			 System.out.println(card.display());
-		}
-	}
-	
-	public int getScore() {
-		int score = 0;
-		
-		for (Card card : myCards) {
-			score += card.getValue();
-		}
-		
-		return score;
-	};
+
 }
