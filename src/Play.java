@@ -32,11 +32,11 @@ public class Play {
 		while (player.getScore() <= 21) {
 			// Player decides if he wants to take another card
 			Scanner myObj = new Scanner(System.in);
-			System.out.println("Do you want to take another card? (Please answer with yes or no):");
+			System.out.println("Do you want to take another card? (Please answer with y(es) or n(o)):");
 			String input = myObj.nextLine();
 
 			// Get another card
-			if (input.equalsIgnoreCase("yes")) {
+			if (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y")) {
 				newCard = carddeck.drawCard();
 				player.takeCard(newCard);
 				player.showCards();
@@ -44,7 +44,7 @@ public class Play {
 			}
 
 			// Stop
-			else if (input.equalsIgnoreCase("no")) {
+			else if (input.equalsIgnoreCase("no") || input.equalsIgnoreCase("n")) {
 				System.out.println("Ok, no card.");
 				break;
 			}
@@ -55,13 +55,13 @@ public class Play {
 		}
 		
 		if (player.getScore() > 21) {
-			System.out.println("Player = Loser");
+			System.out.println("Sorry, you lost!");
 			System.exit(0);
 		
 		}
 		
 		if (player.getScore() == 21) {
-			System.out.println("Player = Winner");
+			System.out.println("Yeah, you won!");
 			System.exit(0);
 		}
 		
@@ -76,19 +76,19 @@ public class Play {
 			newCard = carddeck.drawCard();
 			dealer.takeCard(newCard);
 			dealer.showCards();
-			System.out.println("Your new score is: " + dealer.getScore());
+			System.out.println("The Dealer's score is: " + dealer.getScore());
 		}
 		
 		//Who is the winner after end of game
 		if (dealer.getScore()>21) {
-			System.out.println("Player = Winner");
+			System.out.println("Yeah, you won!");
 			System.exit(0);
 		}
 		if (dealer.getScore()> player.getScore()) {
-			System.out.println("Player = Loser");
+			System.out.println("Sorry, you lost!");
 		}
 		else if (dealer.getScore()< player.getScore()) {
-			System.out.println("Player = Winner");
+			System.out.println("Yeah, you won!");
 		}
 		else System.out.println("Draw!");
 		

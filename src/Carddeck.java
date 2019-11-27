@@ -40,7 +40,9 @@ public class Carddeck {
 	}
 
 	private void addCard(char cardType, char cardColor, Integer cardValue) {
-		Card card = new Card(cardColor, cardType, cardValue);
+	//	Card card = new Card(cardColor, cardType, cardValue);
+		Card card = new Card(cardColor, 'a', 1);
+
 		cardsInDeck.add(card);
 	}
 
@@ -49,16 +51,12 @@ public class Carddeck {
 	}
 
 	public Card drawCard() {
-		if (cardsInDeck.size() > 0) {
-//			Cards will be aces, testing!			
-//			Card firstCardInDeck = cardsInDeck.get(0);
-//			cardsInDeck.remove(0);
+		if (cardsInDeck.size() > 0) {		
+			Card firstCardInDeck = cardsInDeck.get(0);
+			cardsInDeck.remove(0);
 			
-//debug start
-			Card cheatCard = new Card('\u2666', 'a', 1);
-//debug end
-			return cheatCard;
-//			return firstCardInDeck;
+
+			return firstCardInDeck;
 		} else {
 			return null;
 		}
