@@ -55,7 +55,7 @@ public class Carddeck {
 //			cardsInDeck.remove(0);
 			
 //debug start
-			Card cheatCard = new Card('h', 'a', 1);
+			Card cheatCard = new Card('\u2666', 'a', 1);
 //debug end
 			return cheatCard;
 //			return firstCardInDeck;
