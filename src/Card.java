@@ -1,4 +1,3 @@
-
 public class Card {
 	private char color;
 	private char type;
@@ -39,10 +38,160 @@ public class Card {
 
 	public String display() {
 		if (hidden) {
-			return "hidden card";
+//			return "hidden card";
+			return "🃏";
 		} else {
-			return "" + this.getColor() + this.getType();
+
+			// Unicode picture
+
+			switch (this.getType()) {
+			case 'a':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃁";
+				case '\u2665':
+					return "🂱";
+				case '\u2660':
+					return "🂡";
+				case '\u2663':
+					return "🃑";
+				}
+			case '2':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃂";
+				case '\u2665':
+					return "🂲";
+				case '\u2660':
+					return "🂢";
+				case '\u2663':
+					return "🃒";
+				}
+			case '3':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃃";
+				case '\u2665':
+					return "🂳";
+				case '\u2660':
+					return "🂣";
+				case '\u2663':
+					return "🃓";
+				}
+			case '4':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃄";
+				case '\u2665':
+					return "🂴";
+				case '\u2660':
+					return "🂤";
+				case '\u2663':
+					return "🃔";
+				}
+			case '5':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃅";
+				case '\u2665':
+					return "🂵";
+				case '\u2660':
+					return "🂥";
+				case '\u2663':
+					return "🃕";
+				}
+			case '6':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃆";
+				case '\u2665':
+					return "🂶";
+				case '\u2660':
+					return "🂦";
+				case '\u2663':
+					return "🃖";
+				}
+			case '7':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃇";
+				case '\u2665':
+					return "🂷";
+				case '\u2660':
+					return "🂧";
+				case '\u2663':
+					return "🃗";
+				}
+			case '8':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃈";
+				case '\u2665':
+					return "🂸";
+				case '\u2660':
+					return "🂨";
+				case '\u2663':
+					return "🃘";
+				}
+			case '9':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃉";
+				case '\u2665':
+					return "🂹";
+				case '\u2660':
+					return "🂩";
+				case '\u2663':
+					return "🃙";
+				}
+			case '0':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃊";
+				case '\u2665':
+					return "🂺";
+				case '\u2660':
+					return "🂪";
+				case '\u2663':
+					return "🃚";
+				}
+			case 'j':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃋";
+				case '\u2665':
+					return "🂻";
+				case '\u2660':
+					return "🂫";
+				case '\u2663':
+					return "🃛";
+				}
+			case 'q':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃍";
+				case '\u2665':
+					return "🂽";
+				case '\u2660':
+					return "🂭";
+				case '\u2663':
+					return "🃝";
+				}
+			case 'k':
+				switch (this.getColor()) {
+				case '\u2666':
+					return "🃎";
+				case '\u2665':
+					return "🂾";
+				case '\u2660':
+					return "🂮";
+				case '\u2663':
+					return "🃞";
+				}
+			}
+
 		}
+		return "" + this.getColor() + this.getType();
 	}
 
 	public boolean needsValue() {

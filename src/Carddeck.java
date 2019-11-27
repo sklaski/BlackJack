@@ -10,15 +10,15 @@ public class Carddeck {
 
 	public Carddeck() {
 		HashMap<Character, Integer> cardValue = new HashMap<Character, Integer>();
-		char[] type = new char[12]; // Array for type (ass, 2 - 9, jack, queen, king)
+		char[] type = new char[14]; // Array for type (ass, 2 - 9, ten, jack, queen, king)
 		type[0] = 'a'; // element[0]: ass
 		cardValue.put(type[0], 1); // Value for ass: 1
-		for (int i = 1; i < 9; i++) {
+		for (int i = 2; i < 10; i++) {
 			type[i] = (char) ('1' + i); // element[1..8]: 2-9
 			cardValue.put(type[i], i + 1); // Value for numbers: number
 		}
-		int j = 9;
-		for (char c : new char[] { 'j', 'q', 'k' }) {
+		int j = 10;
+		for (char c : new char[] {'0', 'j', 'q', 'k' }) {
 			type[j] = c; // element[9..11]: jack, queen, king
 			cardValue.put(type[j], 10); // Value for "pictures": 10
 			j++;
