@@ -44,4 +44,12 @@ public class Card {
 			return "" + this.getColor() + this.getType() + this.getValue();
 		}
 	}
+
+	public boolean needsValue() {
+		if (type == 'A') {
+			return true;
+		} else {
+			return false;
+		}
+	};
 }
