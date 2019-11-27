@@ -50,9 +50,15 @@ public class Carddeck {
 
 	public Card drawCard() {
 		if (cardsInDeck.size() > 0) {
-			Card firstCardInDeck = cardsInDeck.get(0);
-			cardsInDeck.remove(0);
-			return firstCardInDeck;
+//			Cards will be aces, testing!			
+//			Card firstCardInDeck = cardsInDeck.get(0);
+//			cardsInDeck.remove(0);
+			
+//debug start
+			Card cheatCard = new Card('h', 'a', 1);
+//debug end
+			return cheatCard;
+//			return firstCardInDeck;
 		} else {
 			return null;
 		}
