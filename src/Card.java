@@ -46,7 +46,7 @@ public class Card {
 	}
 
 	public boolean needsValue() {
-		if (type == 'A') {
+		if (Character.toUpperCase(type) == 'A') {
 			return true;
 		} else {
 			return false;
