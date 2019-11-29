@@ -58,6 +58,9 @@ for (char c : new char[] {'0', 'j', 'q', 'k' }) {
 
 			return firstCardInDeck;
 		} else {
+			
+			System.out.println("Card Deck empty. Please restart the game.");
+			System.exit(0);
 			return null;
 		}
 	}
