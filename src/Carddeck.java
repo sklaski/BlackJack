@@ -18,15 +18,15 @@ public class Carddeck {
 			cardValue.put(type[i], i + 1); // Value for numbers: number
 		}
 		int j = 9;
-		for (char c : new char[] {'0', 'j', 'q', 'k' }) {
+for (char c : new char[] {'0', 'j', 'q', 'k' }) {
 			type[j] = c; // element[9..11]: jack, queen, king
 			cardValue.put(type[j], 10); // Value for "pictures": 10
 			j++;
 		}
 		for (char c : new char[] { '\u2666', '\u2665', '\u2660', '\u2663' }) {
 			for (char t : type) {
-			String tout = "" + t;
-			String cout = "" + c;
+//			String tout = "" + t;
+//			String cout = "" + c;
 //			System.out.print(tout + cout + cardValue.get(t) + " ");
 
 				addCard(t, c, cardValue.get(t));
