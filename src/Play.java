@@ -5,12 +5,11 @@ public class Play {
 		Carddeck carddeck = new Carddeck();
 		Card newCard;
 		boolean gameover;
-		
-		
+
 		while (true) {
-		Player player = new Player();
-		Dealer dealer = new Dealer();
-		gameover = false;
+			Player player = new Player();
+			Dealer dealer = new Dealer();
+			gameover = false;
 
 			// Palyer takes first card
 			newCard = carddeck.drawCard();
@@ -82,12 +81,12 @@ public class Play {
 			}
 			if (gameover == false && dealer.getScore() > player.getScore()) {
 				System.out.println("Sorry, you lost!");
-			} else if (dealer.getScore() < player.getScore()) {
+			} else if (gameover == false && dealer.getScore() < player.getScore()) {
 				System.out.println("Yeah, you won!");
 				gameover = true;
-			} else
+			} else if (gameover == false) {
 				System.out.println("Draw!");
-
+			}
 			System.out.println("Do you want to play again? Please answer with y(es) or n(o)):");
 			String input = IO.getStdinScanner().next();
 			if (input.equalsIgnoreCase("no") || input.equalsIgnoreCase("n")) {
