@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public abstract class Participant {
 	protected ArrayList<Card> myCards;
@@ -16,9 +15,9 @@ public abstract class Participant {
 		System.out.println(this.role + " has cards: ");
 		
 		for (Card card : myCards) {
-			 System.out.println(card.display());
+			 System.out.print(card.display() + " ");
 		}
-		
+		System.out.println();
 		System.out.println();
 	}
 	
