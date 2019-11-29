@@ -84,6 +84,7 @@ public class Play {
 				System.out.println("Sorry, you lost!");
 			} else if (dealer.getScore() < player.getScore()) {
 				System.out.println("Yeah, you won!");
+				gameover = true;
 			} else
 				System.out.println("Draw!");
 
